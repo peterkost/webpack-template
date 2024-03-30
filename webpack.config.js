@@ -4,9 +4,14 @@ const path = require("path");
 module.exports = {
   mode: "development",
   entry: "./src/index.js",
-  output: {
-    filename: "main.js",
-    path: path.resolve(__dirname, "dist"),
+  devtool: "cheap-source-map",
+  devServer: {
+    static: "./dist",
+    open: {
+      app: {
+        name: "Google Chrome",
+      },
+    },
   },
   module: {
     rules: [
@@ -25,5 +30,8 @@ module.exports = {
     ],
   },
   plugins: [new HtmlWebpackPlugin({ template: "./src/index.html" })],
-  devtool: "cheap-source-map",
+  output: {
+    filename: "main.js",
+    path: path.resolve(__dirname, "dist"),
+  },
 };
