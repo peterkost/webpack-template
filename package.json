@@ -1,5 +1,5 @@
 {
-  "name": "webpack",
+  "name": "webpack-template",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,7 +8,7 @@
     "start": "webpack serve",
     "build": "webpack"
   },
-  "author": "",
+  "author": "Peter Kostin",
   "license": "ISC",
   "devDependencies": {
     "css-loader": "^6.10.0",
